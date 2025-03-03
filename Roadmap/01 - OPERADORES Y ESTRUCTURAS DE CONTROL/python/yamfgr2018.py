@@ -48,7 +48,7 @@ contador%=0.5 #Modulo
 print(f"El numero contador es: {contador}")
 
 
-#Operadores de identidad
+#Operadores de identidadpwd
 entero_1=int(5000)
 entero_2=int(5000)
 print(f"entero_1 is entero_2 {entero_1 is entero_2}")
