@@ -21,3 +21,45 @@
  * Cada lenguaje sigue una convenciones que debes de respetar para que el código se entienda.
  */"""
 
+#Funciones definida por el usuario
+"""def hola():
+    print("Hola Mundo Python")
+
+hola()
+
+#Funcion con retorno
+def retorno_saludo():
+    return "Hola Yam, vamos por ese CCNA"
+
+saludo=retorno_saludo()
+print(saludo)
+
+print(retorno_saludo())"""
+
+#Argumentos en la funcion
+"""def saludo_arg(nombre):
+    return (f"Mis nombres son {nombre}")
+
+print(saludo_arg("Yam Francis Guerra Reyes"))
+
+def saludo_persona(saludo,nombre):
+    return (f"{saludo} {nombre}")
+
+print(saludo_persona("Hola que tal","Yam Francis Guerra Reyes"))"""
+
+"""def saludo_default(nombre="Python"):
+    return (f"Hola que tal {nombre}")
+
+print(saludo_default()) 
+print(saludo_default("Maia Vasquez")) """
+
+def saludo_default(saludo="Hola",nombre="Python"):
+    return (f"{saludo} {nombre}")
+
+print(saludo_default())
+print(saludo_default(nombre="Yam Guerra"))
+print(saludo_default(nombre="Maia Vasquez", saludo="Nos vemos pronto"))
+print(saludo_default("Que hubo mija","Ana Cespedes"))
+
+
+
