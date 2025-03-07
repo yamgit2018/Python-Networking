@@ -53,13 +53,34 @@ print(saludo_persona("Hola que tal","Yam Francis Guerra Reyes"))"""
 print(saludo_default()) 
 print(saludo_default("Maia Vasquez")) """
 
-def saludo_default(saludo="Hola",nombre="Python"):
+"""def saludo_default(saludo="Hola",nombre="Python"):
     return (f"{saludo} {nombre}")
 
 print(saludo_default())
 print(saludo_default(nombre="Yam Guerra"))
 print(saludo_default(nombre="Maia Vasquez", saludo="Nos vemos pronto"))
-print(saludo_default("Que hubo mija","Ana Cespedes"))
+print(saludo_default("Que hubo amor","Ana Cespedes"))
+"""
+#Retorno de varios valores 
+"""def multiple_retorno():
+    return "Dios ", "Danos fuerza por favor"
 
+frase1, frase2=multiple_retorno()
+print(f"{frase2} {frase1}")"""
 
+#Argumentos Infinitos
+"""def greet_coding(*lenguajes):
+   for lenguaje in lenguajes:
+     print(f"Hola {lenguaje}!")
+
+greet_coding("Pyton","Java","Javascript")    """ 
+
+# Argumentos de palabras 
+def coding_key(**lenguajes):
+   for clave  , lenguaje in lenguajes.items():
+        print (f"{clave} : {lenguaje}")
+
+coding_key(Lenguaje="Python", Tipo="Automatizacion", Variables=10)
+coding_key(Lenguaje="Javascript", Tipo="Lenguaje Web")
+coding_key(Lenguaje="Java")
 
