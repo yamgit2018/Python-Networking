@@ -76,11 +76,68 @@ print(f"{frase2} {frase1}")"""
 greet_coding("Pyton","Java","Javascript")    """ 
 
 # Argumentos de palabras 
-def coding_key(**lenguajes):
+"""def coding_key(**lenguajes):
    for clave  , lenguaje in lenguajes.items():
         print (f"{clave} : {lenguaje}")
 
 coding_key(Lenguaje="Python", Tipo="Automatizacion", Variables=10)
 coding_key(Lenguaje="Javascript", Tipo="Lenguaje Web")
-coding_key(Lenguaje="Java")
+coding_key(Lenguaje="Java")"""
+
+#Funciones dentro de otras funciones
+"""def funcion_externa():
+    def funcion_interna():
+        print("Funcion Interna, hola Python")
+    funcion_interna()    
+
+funcion_externa()"""
+
+#Funcion del Lenguaje
+"""print(len("Yam Francis Guerra Reyes"))
+print(type(25))
+print(type("Hola que tal "))
+print(type(True))
+print("yam".upper())"""
+
+#Variables Locales y Globales
+"""g_variable="Vamos con todo DevNet"
+print(g_variable)"""
+
+"""def hola_devnet():
+    global_var="Let´s DevNet"
+    local_var="Hola que tal,"
+    print(local_var,global_var)
+
+hola_devnet()"""
+"""for contador in range (1,101,1):
+    print(contador)"""
+
+"""Crea una función que reciba dos parámetros de tipo cadena de texto y retorne un número.
+ * - La función imprime todos los números del 1 al 100. Teniendo en cuenta que:
+ *   - Si el número es múltiplo de 3, muestra la cadena de texto del primer parámetro.
+ *   - Si el número es múltiplo de 5, muestra la cadena de texto del segundo parámetro.
+ *   - Si el número es múltiplo de 3 y de 5, muestra las dos cadenas de texto concatenadas.
+ *   - La función retorna el número de veces que se ha impreso el número en lugar de los textos."""
+
+primer_parametro=input("Ingresa el primer dato:" )
+segundo_parametro=input("Ingresa el segundo dato:")
+
+def imprimiendo_parametros(primer, segundo) -> int:
+    contador=0 #No es Multiplo ni de 3 y 5
+    for numero_imp in range (1,101):
+        if ((numero_imp%3==0) and (numero_imp%5==0)):
+            print(f"{primer} {segundo}")
+        elif (numero_imp%3==0):
+            print(f"{primer}")
+        elif (numero_imp%5==0) :
+            print(f"{segundo}")
+        else:
+            contador+=1
+            print(f"{numero_imp}")
+    return  contador  
+
+
+contador_numerico=imprimiendo_parametros(primer_parametro,segundo_parametro)
+print(f"Número de veces que se ha impreso el número: {contador_numerico}")
+
 
