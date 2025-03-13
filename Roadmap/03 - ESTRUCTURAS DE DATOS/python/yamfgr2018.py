@@ -17,13 +17,38 @@
  */
 """
 # Listas
-mi_lista=["Yam","Any","Carlos","Janda"]
+"""mi_lista=["Yam","Any","Carlos","Janda"]
 print(mi_lista)
 mi_lista.append("Cattaleya") #Insercion
 print(mi_lista)
-mi_lista.remove("Cattaleya")#Borrado
+mi_lista.remove("Cattaleya")#Eliminacion
 print(mi_lista)
-mi_lista[0]="Valeria" #Cambiar
+mi_lista[0]="Valeria" #Actualizacion
 print(mi_lista)
+mi_lista.sort()#Ordenacion
+print(mi_lista)"""
 
+#Tuplas
+"""mi_tupla= ("Yam Francis", "Guerra Reyes", "Loco Sencillo",42)
+for tupla in mi_tupla:
+    print(tupla)"""
+
+"""matriz=(
+        (1,2,3),
+        (4,5,6),
+        (7,8,9)
+    )
+
+print(matriz[2][0])"""
+
+frutas=("Manzana", "Pera", "Durazno")
+"""fruta1,fruta2,fruta3=frutas
+print(fruta1)
+print(fruta2)
+print(fruta3)"""
+frutas=tuple(sorted(frutas)) #Ordenacion
+for fruta in frutas:
+    print(fruta)
+
+print(type(frutas))
 
