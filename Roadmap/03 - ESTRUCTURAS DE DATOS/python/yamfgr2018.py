@@ -41,14 +41,47 @@ for tupla in mi_tupla:
 
 print(matriz[2][0])"""
 
-frutas=("Manzana", "Pera", "Durazno")
+#frutas=("Manzana", "Pera", "Durazno","Manzana")
+
 """fruta1,fruta2,fruta3=frutas
 print(fruta1)
 print(fruta2)
 print(fruta3)"""
-frutas=tuple(sorted(frutas)) #Ordenacion
+"""frutas=tuple(sorted(frutas)) #Ordenacion
 for fruta in frutas:
     print(fruta)
 
-print(type(frutas))
+print(type(frutas))"""
 
+
+#Sets
+""""mi_set={"Yam", "Guerra", "@yamfgr2018","42"}
+print(mi_set)
+for datos in mi_set:
+    print(datos)"""
+
+"""mi_set.add("yamfgr2018@gmail.com") #Insercion
+mi_set.remove("42")#Eliminacion
+mi_set=sorted(mi_set)
+print(mi_set)
+
+papa_set:set={"Carlos","Guerra","62"}
+print(papa_set)"""
+
+#Diccionario
+mi_dicc={"Nombres":"Maia Vasquez Guerra",
+         "Edad":"8","Lugar de Nacimiento":"Pisco"}
+mi_dicc["Nombres"]="Yam Francis Guerra Reyes"#Actualizacion
+mi_dicc["Profesion"]="Ingeniero Informatico"#Agregacion
+mi_dicc["Edad"]="42"#Actualizacion
+del mi_dicc["Lugar de Nacimiento"] #Eliminacion
+print(mi_dicc)
+print(type(mi_dicc))
+
+
+
+for clave, valor in mi_dicc.items():
+   print (f"{clave}: {valor}")
+
+mi_dicc= sorted(mi_dicc.items())
+print(mi_dicc)
