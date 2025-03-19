@@ -1,21 +1,4 @@
-"""/*
- * EJERCICIO:
- * - Muestra ejemplos de creación de todas las estructuras soportadas por defecto
- *   en tu lenguaje.
- * - Utiliza operaciones de inserción, borrado, actualización y ordenación.
- *
- * DIFICULTAD EXTRA (opcional):
- * Crea una agenda de contactos por terminal.
- * - Debes implementar funcionalidades de búsqueda, inserción, actualización
- *   y eliminación de contactos.
- * - Cada contacto debe tener un nombre y un número de teléfono.
- * - El programa solicita en primer lugar cuál es la operación que se quiere realizar,
- *   y a continuación los datos necesarios para llevarla a cabo.
- * - El programa no puede dejar introducir números de teléfono no numéricos y con más
- *   de 11 dígitos (o el número de dígitos que quieras).
- * - También se debe proponer una operación de finalización del programa.
- */
-"""
+
 # Listas
 """mi_lista=["Yam","Any","Carlos","Janda"]
 print(mi_lista)
@@ -69,7 +52,7 @@ papa_set:set={"Carlos","Guerra","62"}
 print(papa_set)"""
 
 #Diccionario
-mi_dicc={"Nombres":"Maia Vasquez Guerra",
+""""mi_dicc={"Nombres":"Maia Vasquez Guerra",
          "Edad":"8","Lugar de Nacimiento":"Pisco"}
 mi_dicc["Nombres"]="Yam Francis Guerra Reyes"#Actualizacion
 mi_dicc["Profesion"]="Ingeniero Informatico"#Agregacion
@@ -84,4 +67,50 @@ for clave, valor in mi_dicc.items():
    print (f"{clave}: {valor}")
 
 mi_dicc= sorted(mi_dicc.items())
-print(mi_dicc)
+print(mi_dicc)"""
+
+
+"""/*
+ * EJERCICIO:
+ * - Muestra ejemplos de creación de todas las estructuras soportadas por defecto
+ *   en tu lenguaje.
+ * - Utiliza operaciones de inserción, borrado, actualización y ordenación.
+ *
+ * DIFICULTAD EXTRA (opcional):
+ * Crea una agenda de contactos por terminal.
+ * - Debes implementar funcionalidades de búsqueda, inserción, actualización
+ *   y eliminación de contactos.
+ * - Cada contacto debe tener un nombre y un número de teléfono.
+ * - El programa solicita en primer lugar cuál es la operación que se quiere realizar,
+ *   y a continuación los datos necesarios para llevarla a cabo.
+ * - El programa no puede dejar introducir números de teléfono no numéricos y con más
+ *   de 11 dígitos (o el número de dígitos que quieras).
+ * - También se debe proponer una operación de finalización del programa.
+ */
+"""
+"""agenda=[
+[{"Nombre":"Yam Guerra", "Celular":935378556},{"Nombre":"Ana Cespedes", "Celular":123456789},{"Nombre":"Carlos Guerra", "Celular":987654321}]
+]
+
+for fila in agenda:
+    for celda in fila:
+        print(celda,end=" ")"""
+
+
+print("Agenda")
+
+numero_ingresos=int(input("Ingresa el numero de contactos a ingresar:"))
+
+
+for cuenta in range():
+    nombre=input("Ingresa tus nombres: ")
+    celular=int(input("Ingresa tu numero celular: "))
+    mi_agenda= {"Nombres:":nombre,"Celular:":celular}
+
+for clave , dato in mi_agenda.items():
+    print(f"{clave} {dato}")
+
+
+
+
+
