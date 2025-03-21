@@ -97,19 +97,32 @@ for fila in agenda:
         print(celda,end=" ")"""
 
 
-print("Agenda")
+print("Mi Agenda")
 
-numero_ingresos=int(input("Ingresa el numero de contactos a ingresar:"))
+numero_ingresos=int(input("Ingresa el numero de contactos: "))
+mi_agenda= []
 
+for cuenta in range(numero_ingresos):
+    print(f"Ingresando Contacto nro. {cuenta+1}")
 
-for cuenta in range():
-    nombre=input("Ingresa tus nombres: ")
+    #Ingresa Nombres
+    nombre=input("Ingresando Nombres: ")
+
     celular=int(input("Ingresa tu numero celular: "))
-    mi_agenda= {"Nombres:":nombre,"Celular:":celular}
 
-for clave , dato in mi_agenda.items():
-    print(f"{clave} {dato}")
+    #Ingresa Celular
+    contacto= {"Nombres:":nombre,"Celular:":celular}
+    mi_agenda.append(contacto)
 
+
+#Muestra de la agenda ingresada
+print("Agenda Completa")
+for contactos  in mi_agenda:
+    for clave, valor in contactos.items():
+        print(f"{clave} {valor}")
+       
+
+       
 
 
 
