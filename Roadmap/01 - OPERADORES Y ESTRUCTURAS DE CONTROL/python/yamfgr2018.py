@@ -97,11 +97,75 @@ ip_int=int(ip)
 mascara=0xFFFFFF00 #/24
 red_resultante=ip_int & mascara
 print(ipaddress.IPv4Address(red_resultante))"""
-valorb1=0b1100
+"""valorb1=0b1100
 valorb2=0b1010
 #Operador and
-print(bin(valorb1&valorb2))
-#Operadpr or
-print(bin(valorb1| valorb2))
+print(10 and 12)
+print(10 & 12)
+
+print(10 or 12)
+print(10 | 12)"""
+"""#Operadpr or
+print(bin(valorb1 or valorb2))
 #Operador xor
-print(bin(valorb1))
+print(bin(valorb1 ^ valorb2)) 
+#Opereador NOT
+print(f"Valor negativo de 10  es {~ 10}")"""
+
+"""#Desplazamiento izq der
+print(f"Desplazamiento a al derecha 10>>2: {10>>2}")
+#1010   >>  0010
+print(f"Desplazamiento a al izquierda 10<<2: {10<<2}")
+#1010 << 101000 
+"""
+#Estructura de Control
+
+#Condicional if
+
+#/26
+"""if mascara==0xfffffe0:
+    print("Es mascara /23")
+else:
+    print("No es mascara /23")
+"""
+#Condicional Intermedia
+"""if mascara==0xFFFFFe00:
+    print("Es mascara /23")
+elif mascara==0xffffff00:
+    print("Es mascara /24")
+else:
+    print("No es ni mascara /23 y /24")"""
+
+#Iterativas
+"""ip=ipaddress.IPv4Address("192.168.100.1")
+if(ip=="192.168.100.1"):
+    print(f"Esta es la ip 192.168.100.1")
+else:"""
+  #  print("Esta no es la ip 192.168.100.1")
+"""for ip in range(1,10):  #1-9
+    print(f"Esta es la ip {ip}")"""
+"""while(ip<"192.168.100.10"):
+      print(f"Esta es la ip {ip}")
+      ip+=1"""
+#for ip in range(10):
+ip_inicio=ipaddress.IPv4Address('192.168.100.1')
+ip_final=ipaddress.IPv4Address('192.168.100.6')
+
+for ip_int in range(int(ip_inicio),int(ip_final)):
+    print(f"Esta es la IP: {ipaddress.IPv4Address(ip_int)}")
+
+mascara_24=0xffffff00#/24
+print(f"Esta es la mascara /24: {ipaddress.IPv4Address(mascara_24)}")
+mascara_30=0xfffffffc#/30
+print(f"Esta es la mascara /30: {ipaddress.IPv4Address(mascara_30)}")
+mascara_29=0xfffffff8#/29
+print(f"Esta es la mascara /29: {ipaddress.IPv4Address(mascara_29)}")
+
+mascara=0xffffff00 #/24
+if mascara==0xffffff00:
+    print("Es mascara /24")
+elif mascara==0xffffff00:
+    print("Es mascara /23")
+else:
+    print("No es ni mascara /23 y /24")
+
