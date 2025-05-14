@@ -148,13 +148,13 @@ else:"""
       print(f"Esta es la ip {ip}")
       ip+=1"""
 #for ip in range(10):
-ip_inicio=ipaddress.IPv4Address('192.168.100.1')
-ip_final=ipaddress.IPv4Address('192.168.100.6')
+"""ip_inicio=ipaddress.IPv4Address('192.168.100.1')
+ip_final=ipaddress.IPv4Address('192.168.100.10')
 
-for ip_int in range(int(ip_inicio),int(ip_final)):
-    print(f"Esta es la IP: {ipaddress.IPv4Address(ip_int)}")
+for ip in range(int(ip_inicio),int (ip_final)):
+    print(f"Esta es la IP: {ipaddress.IPv4Address(ip)}")"""
 
-mascara_24=0xffffff00#/24
+"""mascara_24=0xffffff00#/24
 print(f"Esta es la mascara /24: {ipaddress.IPv4Address(mascara_24)}")
 mascara_30=0xfffffffc#/30
 print(f"Esta es la mascara /30: {ipaddress.IPv4Address(mascara_30)}")
@@ -167,5 +167,47 @@ if mascara==0xffffff00:
 elif mascara==0xffffff00:
     print("Es mascara /23")
 else:
-    print("No es ni mascara /23 y /24")
+    print("No es ni mascara /23 y /24")"""
 
+
+"""ip_inicio=ipaddress.IPv4Address('192.168.100.1')
+#ip_final=ipaddress.IPv4Address('192.168.100.6')
+ip_inicio+=100
+print(ip_inicio)
+"""
+#While
+"""ip=ipaddress.IPv4Address('192.168.10.0')
+ip_final=ipaddress.IPv4Address('192.168.10.10')
+while (int(ip)<int(ip_final)):
+    print(ip)
+    ip+=1
+"""
+"""
+ip=ipaddress.IPv4Address("192.168.10.15")
+print(type(ip))"""
+
+#while
+"""ip1=ipaddress.IPv4Address("172.16.0.100")
+ip_final=ipaddress.IPv4Address("172.16.0.110")
+while(int(ip1)<=int(ip_final)):
+    print(ip1)
+    ip1+=1 
+
+#For
+ip_inicial2=ipaddress.IPv4Address('172.17.0.100')
+ip_final2=ipaddress.IPv4Address('172.17.0.111')
+for ip2 in range(int(ip_inicial2),int(ip_final2)):
+    print(ipaddress.IPv4Address(ip2))"""
+
+#Manejo de Excepciones 
+try:
+    
+    dividiendo=int(input("Ingresa el dividiendo: "))
+    divisor=int(input("Ingresa el divisor: "))
+    cociente=dividiendo/divisor
+except ZeroDivisionError:
+    print("Error en la division")
+else:
+    print(f"La division es {cociente}")
+finally:
+    print("Finalizacion de la division")    
