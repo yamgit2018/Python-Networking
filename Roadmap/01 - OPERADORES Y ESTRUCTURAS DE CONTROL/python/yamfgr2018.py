@@ -200,7 +200,7 @@ for ip2 in range(int(ip_inicial2),int(ip_final2)):
     print(ipaddress.IPv4Address(ip2))"""
 
 #Manejo de Excepciones 
-try:
+"""try:
     
     dividiendo=int(input("Ingresa el dividiendo: "))
     divisor=int(input("Ingresa el divisor: "))
@@ -210,4 +210,22 @@ except ZeroDivisionError:
 else:
     print(f"La division es {cociente}")
 finally:
-    print("Finalizacion de la division")    
+    print("Finalizacion de la division")    """
+
+"""* DIFICULTAD EXTRA (opcional):
+* Crea un programa que imprima por consola todos los números comprendidos
+* entre 10 y 55 (incluidos), pares, y que no son ni el 16 ni múltiplos de 3"""
+
+"""ip_inicio=ipaddress.IPv4Address("192.168.10.10")
+ip_final=ipaddress.IPv4Address("192.168.10.56")
+
+for ip_nueva in range(int(ip_inicio),int(ip_final)):
+    if(((int(ip_nueva))%2) ==0 and ((int(ip_nueva))%16)!=0 and ((int(ip_nueva)%3)!=0)):
+        print(ipaddress.IPv4Address(ip_nueva))
+        print(ip_nueva)
+"""
+valor_inicial=10
+valor_final=56
+for valor in range (valor_inicial,valor_final):
+    if ((valor%2==0) and (valor!=16) and ((valor%3)!=0)):
+        print(f"Este valor es par: {valor}")
