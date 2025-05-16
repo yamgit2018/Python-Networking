@@ -31,7 +31,7 @@ for contador_icmp in range(4):
 print(f"Valor decimal de 8 bits es: {2**8} ")
 print(f"Valores de 8 bits son: 0 a {2**8-1}")
 
-#Operadores de comparacion
+#Operadores de comparacion  
 MAC_SW1="aa.04.23.45.56.36"
 MAC_SW2="45.36.89.ff.ab.45"
 if (MAC_SW2==MAC_SW1):
