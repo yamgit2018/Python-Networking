@@ -51,7 +51,7 @@ timers_stp(hello_time=5,forwar_delay_learning=5,forward_delay_listening=12)"""
 
 #Funcion argumentos y retorno
 
-def subnet_completa(ip,mascara):
+"""def subnet_completa(ip,mascara):
     subnet_1=ipaddress.ip_interface(f"{ip}/{mascara}")
     return subnet_1
 
@@ -59,11 +59,28 @@ def subnet_completa(ip,mascara):
 ip=input("Ingresa la ip de la red ejm(172.16.10.40): ")
 mascara=input("Ingresa la mascara ejm(24 / 255.255.255.0): ")
 
-red=ipaddress.ip_interface(subnet_completa(ip,mascara))
+red=subnet_completa(ip,mascara)
 print(f"Esta es la ip: {red.ip}")
 print(f"Esta es la mascara: {red.netmask}")
 print(f"Esta es la ip red: {red.network.network_address}")
 print(f"Esta es la ip broadcast:  {red.network.broadcast_address}")
+"""
+#Retorno multiple
+
+"""def ingreso_ip_mascara():
+    ip=input("Ingresa una ip(ejm 192.168.10.5): ")
+    mascara=input("Ingresa la mascara(ejm 255.255.255.0/24): ")
+    net=ipaddress.ip_interface(f"{ip}/{mascara}")
+    return net.ip, net.netmask
+
+
+ip_nueva, mascara_nueva=ingreso_ip_mascara()
+print(f"IP: {ip_nueva}")
+print(f"Mascara: {mascara_nueva}")"""
+
+#
+
+
 
 
 
