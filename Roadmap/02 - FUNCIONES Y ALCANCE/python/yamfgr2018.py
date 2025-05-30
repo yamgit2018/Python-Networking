@@ -78,7 +78,27 @@ ip_nueva, mascara_nueva=ingreso_ip_mascara()
 print(f"IP: {ip_nueva}")
 print(f"Mascara: {mascara_nueva}")"""
 
-#
+# Con un numero variable de argumentos
+"""def imprimir_ips(*ips): 
+    for ip in ips:
+        print(f"Esta es la ip: {ip}")
+
+imprimir_ips("192.168.10.100",1,2.4)"""
+
+#keyword arguments como argumento, clave - valor
+def imprimir_valores_ospf(**valores_preterminado_ospf):
+  #  print(type(valores_preterminado_ospf))
+    print("\n")
+    for parametro,valor in valores_preterminado_ospf.items():
+        print(f"{parametro}: {valor}")
+
+
+imprimir_valores_ospf(Hello=10,Dead=4,Prioridad=1)
+
+
+
+
+
 
 
 
