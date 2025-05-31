@@ -88,7 +88,7 @@ imprimir_ips("192.168.10.100",1,2.4)"""
 #keyword arguments como argumento, clave - valor
 """def imprimir_valores_ospf(**valores_preterminado_ospf):
   #  print(type(valores_preterminado_ospf))
-    print("\n")
+  
     for parametro,valor in valores_preterminado_ospf.items():
         print(f"{parametro}: {valor}")
 
@@ -103,7 +103,7 @@ def validar_verificar_ip():
             subnet=ipaddress.IPv4Network(subnet)
             return ip_validacion in subnet
         except ValueError as e:
-            return f"!Error {e}"
+            return f"!Error {e} no es una ip"
     
 
     ip=input("Ingresa una ip para la validacion ejm 192.168.10.1:")
@@ -116,7 +116,8 @@ def validar_verificar_ip():
         else:       
             print(f"Esta ip {ip} no esta en la red {subnet}")
     else:
-        print (resultado)        
+        print (resultado)  
+validar_verificar_ip()      
 
 
 
