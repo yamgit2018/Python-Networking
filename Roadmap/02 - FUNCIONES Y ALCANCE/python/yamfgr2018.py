@@ -86,7 +86,7 @@ print(f"Mascara: {mascara_nueva}")"""
 imprimir_ips("192.168.10.100",1,2.4)"""
 
 #keyword arguments como argumento, clave - valor
-def imprimir_valores_ospf(**valores_preterminado_ospf):
+"""def imprimir_valores_ospf(**valores_preterminado_ospf):
   #  print(type(valores_preterminado_ospf))
     print("\n")
     for parametro,valor in valores_preterminado_ospf.items():
@@ -94,6 +94,31 @@ def imprimir_valores_ospf(**valores_preterminado_ospf):
 
 
 imprimir_valores_ospf(Hello=10,Dead=4,Prioridad=1)
+"""
+#Funciones Anidadas:
+def validar_verificar_ip():
+    def es_ip_en_subnet(ip,subnet):
+        try:
+            ip_validacion=ipaddress.IPv4Address(ip)
+            subnet=ipaddress.IPv4Network(subnet)
+            return ip_validacion in subnet
+        except ValueError as e:
+            return f"!Error {e}"
+    
+
+    ip=input("Ingresa una ip para la validacion ejm 192.168.10.1:")
+    subnet="192.168.10.0/24"
+    resultado=es_ip_en_subnet(ip,subnet)
+
+    if isinstance(resultado, bool):
+        if resultado:
+            print(f"Esta ip {ip} esta en red {subnet}")
+        else:       
+            print(f"Esta ip {ip} no esta en la red {subnet}")
+    else:
+        print (resultado)        
+
+
 
 
 
