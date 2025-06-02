@@ -96,7 +96,7 @@ imprimir_ips("192.168.10.100",1,2.4)"""
 imprimir_valores_ospf(Hello=10,Dead=4,Prioridad=1)
 """
 #Funciones Anidadas:
-def validar_verificar_ip():
+"""def validar_verificar_ip():
     def es_ip_en_subnet(ip,subnet):
         try:
             ip_validacion=ipaddress.IPv4Address(ip)
@@ -117,7 +117,22 @@ def validar_verificar_ip():
             print(f"Esta ip {ip} no esta en la red {subnet}")
     else:
         print (resultado)  
-validar_verificar_ip()      
+validar_verificar_ip()      """
+
+#Funiones Python
+subnet=ipaddress.IPv4Network("192.168.10.0/30")
+print(f"La IP red es: {subnet.network_address}")
+print(f"La ip de broadcast: {subnet.broadcast_address}")
+print(f"La mascara de red: {subnet.netmask}")
+print("\n")
+print("IPs de hosts en la red 192.168.10.0/30")
+for ip in subnet.hosts():
+    print(ip)
+
+#Variables Locales y Globakes
+#Ambito de las variables
+
+
 
 
 
