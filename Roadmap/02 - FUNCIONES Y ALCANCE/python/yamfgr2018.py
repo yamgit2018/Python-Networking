@@ -120,19 +120,41 @@ imprimir_valores_ospf(Hello=10,Dead=4,Prioridad=1)
 validar_verificar_ip()      """
 
 #Funiones Python
-subnet=ipaddress.IPv4Network("192.168.10.0/30")
+"""subnet=ipaddress.IPv4Network("192.168.10.0/30")
 print(f"La IP red es: {subnet.network_address}")
 print(f"La ip de broadcast: {subnet.broadcast_address}")
 print(f"La mascara de red: {subnet.netmask}")
 print("\n")
 print("IPs de hosts en la red 192.168.10.0/30")
 for ip in subnet.hosts():
-    print(ip)
+    print(ip)"""
 
 #Variables Locales y Globakes
 #Ambito de las variables
+"""OSPF_DEFAULT_AREA="0.0.0.0"
+MTU=1500
 
+activeRouters=0
+routerA=1
+active_routers=routerA"""
 
+"""def add_router(routerB=3):
+    global activeRouters
+   # active_routers=routerB
+    activeRouters=routerB
+
+add_router()
+print(f"Routers activos {activeRouters}")
+print(f"MTU: {MTU}")
+"""
+#Extra
+"""* Crea una función que reciba dos parámetros de tipo cadena de texto y retorne un número.
+* - La función imprime todos los números del 1 al 100. Teniendo en cuenta que:
+*   - Si el número es múltiplo de 3, muestra la cadena de texto del primer parámetro.
+*   - Si el número es múltiplo de 5, muestra la cadena de texto del segundo parámetro.
+*   - Si el número es múltiplo de 3 y de 5, muestra las dos cadenas de texto concatenadas.
+*   - La función retorna el número de veces que se ha impreso el número en lugar de los textos.
+"""
 
 
 
