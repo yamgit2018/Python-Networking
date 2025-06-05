@@ -136,17 +136,17 @@ MTU=1500
 
 activeRouters=0
 routerA=1
-active_routers=routerA"""
+active_routers=routerA
 
-"""def add_router(routerB=3):
+def add_router(routerB=3):
     global activeRouters
    # active_routers=routerB
     activeRouters=routerB
 
 add_router()
 print(f"Routers activos {activeRouters}")
-print(f"MTU: {MTU}")
-"""
+print(f"MTU: {MTU}")"""
+
 #Extra
 """* Crea una función que reciba dos parámetros de tipo cadena de texto y retorne un número.
 * - La función imprime todos los números del 1 al 100. Teniendo en cuenta que:
@@ -155,9 +155,29 @@ print(f"MTU: {MTU}")
 *   - Si el número es múltiplo de 3 y de 5, muestra las dos cadenas de texto concatenadas.
 *   - La función retorna el número de veces que se ha impreso el número en lugar de los textos.
 """
+print("Bienvenido Contador del 1 al 100 de multiplos de 3 y 5 \n")
+primer_texto=input("Ingresa el primer texto: ")
+segundo_texto=input("Ingresa el segundo texto: ")
+cantidad_3=0
+cantidad_5=0
+no_cantidad_3_5=0
 
-
-
+for valor_numerico in range (1,101,1):
+    if((valor_numerico%3==0)and(valor_numerico%5==0)):
+        print(f"Es multiplo de 3 y 5: {valor_numerico} {primer_texto} {segundo_texto}")
+        cantidad_3+=1
+    elif(valor_numerico%3==0):
+        print(f"Es mutiplo de 3: {valor_numerico} {primer_texto}")
+        cantidad_5+=1
+    elif(valor_numerico%5==0):
+        print(f"Es multiplo de 5: {valor_numerico} {segundo_texto}")
+    else:
+        print(f"No es multiplo ni de 3 y 5: {valor_numerico}")
+        no_cantidad_3_5+=1
+print("\n")
+print(f"Cantidad de multiplos de 3: {cantidad_3}")
+print(f"Cantidad de multiplos de 5: {cantidad_5}")
+print(f"Cantidad de no multiplos de 3 y 5: {no_cantidad_3_5}")
 
 
 
