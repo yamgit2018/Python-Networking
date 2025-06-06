@@ -162,7 +162,7 @@ cantidad_3=0
 cantidad_5=0
 no_cantidad_3_5=0
 
-for valor_numerico in range (1,101,1):
+for valor_numerico in range (1,101):
     if((valor_numerico%3==0)and(valor_numerico%5==0)):
         print(f"Es multiplo de 3 y 5: {valor_numerico} {primer_texto} {segundo_texto}")
         cantidad_3+=1
