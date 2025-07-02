@@ -1,3 +1,4 @@
+#Modulo ipaddress
 import ipaddress
 """ip=ipaddress.IPv4Address("10.0.0.240")
 print(f"\nEsta en la IP de la interface {ip}")"""
@@ -10,8 +11,8 @@ print(f"\nEsta en la IP de la interface {ip}")"""
 print(f"\nEsta es la red 192.168.10.0/30: {ip_net}")"""
 
 #Constantes
-
-NETMASK_24=ipaddress.IPv4Address("255.255.255.0")
+#Clase IPv4Address
+"""NETMASK_24=ipaddress.IPv4Address("255.255.255.0")
 NETMASK_16=ipaddress.IPv4Address("255.255.0.0")
 NETMASK_8=ipaddress.IPv4Address("255.0.0.0")
 
@@ -27,4 +28,7 @@ if (mask == "/24"):
 elif(mask == "/16"):
     print(calcular_red(ip,NETMASK_16))
 else:
-    print(calcular_red(ip,NETMASK_8))
+    print(calcular_red(ip,NETMASK_8))"""
+
+ip_vlan10=ipaddress.IPv4Network("192.168.10.0/24")
+print(ip_vlan10)
