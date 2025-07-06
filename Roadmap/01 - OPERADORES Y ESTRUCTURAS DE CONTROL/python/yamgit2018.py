@@ -41,7 +41,7 @@ print(ip)"""
 
 #OR 
 
-def ip_is_special(ip):
+"""def ip_is_special(ip):
     try:
         ip_validada=ipaddress.ip_address(ip)
         return(
@@ -53,11 +53,29 @@ def ip_is_special(ip):
         return False
 
 print("========== Vamos a validar una ip especiales =============")   
-print(ip_is_special(input("Ingresa una ip especial: ")))
+print(ip_is_special(input("Ingresa una ip especial: ")))"""
 
 #not
+def is_ip_publica(ip_publica):
+    try:
+        ip=ipaddress.IPv4Address(ip_publica)
+        return not ip.is_private
+    except ValueError:
+        return False
+    
+"""if __name__ == "__main__":"""
+ip_input=input("Ingresa una ip publica: ")
+if is_ip_publica(ip_input):
+  print(f"Es una ip publica {ip_input}")
+else: 
+  print(f"No es una ip publica")
 
 
 
 
-#Operadores de Asignacion
+
+
+
+
+
+
