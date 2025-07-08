@@ -56,19 +56,50 @@ print("========== Vamos a validar una ip especiales =============")
 print(ip_is_special(input("Ingresa una ip especial: ")))"""
 
 #not
-def is_ip_publica(ip_publica):
+"""def is_ip_publica(ip_publica):
     try:
         ip=ipaddress.IPv4Address(ip_publica)
         return not ip.is_private
     except ValueError:
         return False
-    
-"""if __name__ == "__main__":"""
+
+if __name__ == "__main__":
 ip_input=input("Ingresa una ip publica: ")
 if is_ip_publica(ip_input):
   print(f"Es una ip publica {ip_input}")
 else: 
   print(f"No es una ip publica")
+"""
+
+""" - `+=` : Suma y asigna
+   - `-=` : Resta y asigna
+   - `*=` : Multiplica y asigna
+   - `/=` : Divide y asigna (aunque en redes no es común, lo adaptaremos)
+   - `//=`: División entera y asigna
+   - `%=` : Módulo y asigna"""
+
+
+"""ip=ip_net.broadcast_address
+print(f"Red: {ip_net}")
+print(f"\nEsta es la ip  de la red 192.168.10.0/30: {ip}")"""
+"""
+ip_net=ipaddress.IPv4Network("192.168.10.0/29")
+for i in range (1, ip_net.num_addresses-1):
+    ip=ipaddress.IPv4Address(ip_net.network_address+i)
+    print(f"Host {i}: {ip}")"""
+
+#Operadores de identidad
+ip1=ipaddress.IPv4Address(input("Ingresa la ip1: "))
+ip2=ipaddress.IPv4Address(input("Ingresa la ip2: "))
+
+print(ip1 is ip2)
+print(ip1 == ip2)
+
+#Operadores de pertenencia
+
+
+
+
 
 
 
