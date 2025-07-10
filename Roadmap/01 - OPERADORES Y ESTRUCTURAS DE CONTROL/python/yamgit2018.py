@@ -89,13 +89,48 @@ for i in range (1, ip_net.num_addresses-1):
     print(f"Host {i}: {ip}")"""
 
 #Operadores de identidad
-ip1=ipaddress.IPv4Address(input("Ingresa la ip1: "))
+"""ip1=ipaddress.IPv4Address(input("Ingresa la ip1: "))
 ip2=ipaddress.IPv4Address(input("Ingresa la ip2: "))
 
 print(ip1 is ip2)
-print(ip1 == ip2)
+print(ip1 == ip2)"""
 
 #Operadores de pertenencia
+"""red=ipaddress.IPv4Network("192.168.1.0/24")
+ip1=ipaddress.IPv4Address("192.168.10.1")
+ip2=ipaddress.IPv4Address("192.168.1.10")
+
+if ip1 in red:
+    print(f"{ip1} si pertenece a la red {red}")
+else:
+    print(f"No pertenece esta ip {ip1} a la red {red}\n")
+
+if ip2 in red:
+    print(f"Esta ip {ip2} si pertenece a la red {red}")
+else:
+    print(f"No pertenece esta {ip2} a la red {red}")
+"""
+
+
+def filtrar_ip_publicas(pull_ip):
+    pool_redes_privadas=[ipaddress.IPv4Network("10.0.0.0/8"),ipaddress.IPv4Network("172.16.0.0/12"),ipaddress.IPv4Network("192.168.0.0/16")]
+
+    pool_ip_publicas=[]
+
+    for ip_publica_validada in pull_ip:
+        ip_publica=ipaddress.IPv4Address(ip_publica_validada)
+        if all(ip_publica not in red for red in pool_redes_privadas) and not ip_publica.is_private:
+            pool_ip_publicas.append(ip_publica)
+    return pool_ip_publicas
+
+lista_ip_publicas=["192.168.1.1", "8.8.8.8", "10.0.0.5", "172.16.0.1", "142.250.184.238"]
+print("IPs Publicas: ",filtrar_ip_publicas(lista_ip_publicas))
+
+
+
+
+#Operadorez de bit
+
 
 
 
