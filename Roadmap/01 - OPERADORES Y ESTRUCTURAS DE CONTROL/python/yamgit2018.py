@@ -112,7 +112,7 @@ else:
 """
 
 
-def filtrar_ip_publicas(pull_ip):
+"""def filtrar_ip_publicas(pull_ip):
     pool_redes_privadas=[ipaddress.IPv4Network("10.0.0.0/8"),ipaddress.IPv4Network("172.16.0.0/12"),ipaddress.IPv4Network("192.168.0.0/16")]
 
     pool_ip_publicas=[]
@@ -124,18 +124,26 @@ def filtrar_ip_publicas(pull_ip):
     return pool_ip_publicas
 
 lista_ip_publicas=["192.168.1.1", "8.8.8.8", "10.0.0.5", "172.16.0.1", "142.250.184.238"]
-print("IPs Publicas: ",filtrar_ip_publicas(lista_ip_publicas))
-
-
+print("IPs Publicas: ",filtrar_ip_publicas(lista_ip_publicas))"""
 
 
 #Operadorez de bit
+"""valor_binario_1=0b1100
+valor_binario_2=0b1010
 
+print(f"AND: {bin(valor_binario_1 & valor_binario_2)}")
+print(f"OR:  {bin(valor_binario_1 | valor_binario_2)}")
+print(f"XOR: {bin(valor_binario_1 ^ valor_binario_2)}")
+print(f"NOT:{bin(~valor_binario_2)}")"""
 
+#IP y AND
+ip=ipaddress.IPv4Address("192.168.10.50")
+mask=ipaddress.IPv4Address("255.255.255.0")
 
+ip_net_bin=int(ip) & int(mask)
+ip_net=ipaddress.IPv4Address(ip_net_bin)
 
-
-
+print(f"IP Network de la ip 192.168.10.50: {ip_net}")
 
 
 
