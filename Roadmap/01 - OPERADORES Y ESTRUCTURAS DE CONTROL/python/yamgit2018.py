@@ -137,14 +137,62 @@ print(f"XOR: {bin(valor_binario_1 ^ valor_binario_2)}")
 print(f"NOT:{bin(~valor_binario_2)}")"""
 
 #IP y AND
-ip=ipaddress.IPv4Address("192.168.10.50")
+"""ip=ipaddress.IPv4Address("192.168.10.50")
 mask=ipaddress.IPv4Address("255.255.255.0")
 
-ip_net_bin=int(ip) & int(mask)
-ip_net=ipaddress.IPv4Address(ip_net_bin)
+ip_net=int(ip) & int(mask)
+print(ip_net)
+print("\n")
+ip_net=ipaddress.IPv4Address(ip_net)
 
-print(f"IP Network de la ip 192.168.10.50: {ip_net}")
+print(f"IP Network de la ip 192.168.10.50: {ip_net}")"""
 
+#Operadores de Comparacion
+"""ip1=ipaddress.IPv4Address("192.168.10.1")
+ip2=ipaddress.IPv4Address("192.168.10.5")
+ 
+print(ip1<=ip2)
+print(ip1>=ip2)
+print(ip1==ip2)
+"""
+
+"""red=ipaddress.IPv4Network("192.168.10.0/24")
+ip=ipaddress.IPv4Address("192.168.10.240")
+
+print(ip  in  red)"""
+
+"""red1=ipaddress.IPv4Network("192.168.1.0/25")
+red2=ipaddress.IPv4Network("192.168.1.0/24")
+
+print(red1.subnet_of(red2))
+print(red2.supernet_of(red1))"""
+
+"""ips=[
+    ipaddress.IPv4Address("172.16.10.45"),
+    ipaddress.IPv4Address("255.255.255.255"),
+    ipaddress.IPv4Address("8.8.8.8")
+]
+lista_ip_ordenadas=sorted(ips)
+
+for ip in lista_ip_ordenadas:
+    print(ip)"""
+
+#Estructuras de Control
+ip1=ipaddress.IPv4Address("192.168.30.5")
+ip2=ipaddress.IPv4Address("192.168.10.240")
+mask=ipaddress.IPv4Address("255.255.255.0")
+
+ip_red1=int(ip1)&int(mask)
+ip_red2=int(ip2)&int(mask)
+
+print(f"Esta ip1 {ip1} y esta ip2 {ip2} \n")
+print(f"Si son  de la misma red estas ips" if  ip_red1==ip_red2 else "No son de la misma red estas ips")
+
+
+"""if  ip_red1==ip_red2 :
+    print("Si son  de la misma red estas ips")
+else:
+  print("No son de la misma red estas ips")  """
 
 
 
