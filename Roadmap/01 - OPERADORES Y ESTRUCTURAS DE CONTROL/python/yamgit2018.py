@@ -178,7 +178,7 @@ for ip in lista_ip_ordenadas:
     print(ip)"""
 
 #Estructuras de Control
-ip1=ipaddress.IPv4Address("192.168.30.5")
+"""ip1=ipaddress.IPv4Address("192.168.30.5")
 ip2=ipaddress.IPv4Address("192.168.10.240")
 mask=ipaddress.IPv4Address("255.255.255.0")
 
@@ -186,7 +186,7 @@ ip_red1=int(ip1)&int(mask)
 ip_red2=int(ip2)&int(mask)
 
 print(f"Esta ip1 {ip1} y esta ip2 {ip2} \n")
-print(f"Si son  de la misma red estas ips" if  ip_red1==ip_red2 else "No son de la misma red estas ips")
+print(f"Si son  de la misma red estas ips" if  ip_red1==ip_red2 else "No son de la misma red estas ips")"""
 
 
 """if  ip_red1==ip_red2 :
@@ -194,7 +194,44 @@ print(f"Si son  de la misma red estas ips" if  ip_red1==ip_red2 else "No son de 
 else:
   print("No son de la misma red estas ips")  """
 
+#Estrutura de Control Condicional
+#IF
+"""ip=ipaddress.IPv4Address(input("Ingresa para validar si es privada o no: "))
 
+if ip.is_private:
+    print("Si es privada esta ip: " +str(ip) )
+else:
+    print(f"Esta ip {ip} no es privada")"""
+
+#Estrutura de Control  Iterativas
+
+#ip1=ipaddress.IPv4Address(input("Ingresa la IP ejm 192.168.10.5: "))
+"""ip_red=ipaddress.ip_interface(input("Ingresa la IP ejm 192.168.10.5/29: "))
+print(ip_red.network.network_address)"""
+"""mask=ipaddress.IPv4Address(input("Ingresa la IP ejm 255.255.255.240: "))
+net=ipaddress.IPv4Network(f"{ip_red}/{mask}")
+
+print("Mostrando las ips de la red 10.0.10.0/28")
+for ip in net.hosts():
+    print(ip)
+"""
+#Creamos la red y su mascara en una interface
+ip=input("Ingresa la ip ejm 192.168.10.5: ")
+print("\n")
+mask=input("Ingresa la mascara ejm: 255.255.255.240: ")
+interface = ipaddress.ip_interface(f"{ip}/{mask}")
+print(f"\nValidamos la ip red de la red:{interface.network.network_address}")
+print(f"\nTambien validamos la mascara de la red: {mask}")
+net=ipaddress.IPv4Network(f"{interface.network.network_address}/{mask}")
+print(f"\nMostramos la lista de ips de la red {interface.network.network_address}/{mask}\n")
+
+for ip_host in net.hosts():
+    print(ip_host)
+print("\n")
+
+#WHILE
+
+"IF ANIDADA"
 
 
 
