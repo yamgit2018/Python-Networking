@@ -216,7 +216,7 @@ for ip in net.hosts():
     print(ip)
 """
 #Creamos la red y su mascara en una interface
-ip=input("Ingresa la ip ejm 192.168.10.5: ")
+"""ip=input("Ingresa la ip ejm 192.168.10.5: ")
 print("\n")
 mask=input("Ingresa la mascara ejm: 255.255.255.240: ")
 interface = ipaddress.ip_interface(f"{ip}/{mask}")
@@ -227,11 +227,38 @@ print(f"\nMostramos la lista de ips de la red {interface.network.network_address
 
 for ip_host in net.hosts():
     print(ip_host)
-print("\n")
+print("\n")"""
 
-#WHILE
+#IF ANIDADA0
+"""ip=ipaddress.IPv4Address(input("Ingresa una ip para validar el tipo de ip:"))
+print('\n')
 
-"IF ANIDADA"
+if ip.is_loopback:
+    print(f"Es una ip loopback {ip} \n")
+elif ip.is_private:
+    print(f"Esta ip es privada {ip} \n")
+elif ip.is_multicast:
+    print(f"Es una ip multicast {ip} \n")
+elif ip.is_global:
+    print(f"Es una ip global {ip} \n")
+else:
+    print(f"No es una ip privada ni multicast ni lookback \n")    """
+
+
+#Excepciones                               
+
+def validacion_ip(ip):
+    try:
+        ip_validada=ipaddress.IPv4Address(ip)
+        print(f"{ip_validada} es loopback:{ip_validada.is_loopback}, es privada {ip_validada.is_private} ,multicast: {ip_validada.is_multicast}")
+    except ValueError as e:
+        print(f"Error de ip {e}")
+ 
+
+#validacion_ip("192.168.10.25")
+#validacion_ip("127.0.0.1")
+validacion_ip("300.40.5.6")
+
 
 
 
