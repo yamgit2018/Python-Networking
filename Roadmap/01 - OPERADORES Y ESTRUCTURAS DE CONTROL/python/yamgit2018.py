@@ -247,17 +247,36 @@ else:
 
 #Excepciones                               
 
-def validacion_ip(ip):
+"""def validacion_ip(ip):
     try:
         ip_validada=ipaddress.IPv4Address(ip)
-        print(f"{ip_validada} es loopback:{ip_validada.is_loopback}, es privada {ip_validada.is_private} ,multicast: {ip_validada.is_multicast}")
+        #print(f"{ip_validada} es loopback:{ip_validada.is_loopback}, es privada {ip_validada.is_private} ,multicast: {ip_validada.is_multicast}")
+        if ip_validada.is_loopback:
+            print(f"Esta IP {ip_validada} es loopback")
+        elif ip_validada.is_private:
+            print(f"Esta IP {ip_validada} es privada")
+        elif ip_validada.is_multicast:
+            print(f"Esta IP {ip_validada} es multicast")
+        else:
+            print(f"Esta IP {ip_validada} es publica")
     except ValueError as e:
         print(f"Error de ip {e}")
  
 
 #validacion_ip("192.168.10.25")
 #validacion_ip("127.0.0.1")
-validacion_ip("300.40.5.6")
+#validacion_ip("300.40.5.6")
+
+validacion_ip(input("Ingresa una IP para validarlo por favor por ejm: 192.168.10.10, 127.0.0.1: "))"""
+
+#DIFICULTAD EXTRA (opcional):
+#Crea un programa que imprima por consola todos los números comprendidos
+#entre 10 y 55 (incluidos), pares, y que no son ni el 16 ni múltiplos de 3.
+
+for numero_impreso in range (10, 56):
+    if (numero_impreso%2==0) and  (numero_impreso!=16) and  (numero_impreso%3!=0):
+        print(numero_impreso)
+
 
 
 
