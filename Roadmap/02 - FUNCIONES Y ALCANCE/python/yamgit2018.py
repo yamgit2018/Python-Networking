@@ -50,10 +50,30 @@ red=input("Ingresa la red y su mascara ejem: 192.168.1.0/29: ")
 cantidad_hosts=int(input("Ingresa cantidad de hosts: "))
 print(cantidad_hosts_red(red,cantidad_hosts))"""
 
-"""red=ipaddress.ip_network("192.168.1.0/29")
+"""red=ipaddress.ip_network(input("Ingresa la red ejm 192.168.10.0/24: "))
 for ip in red.hosts():
     print(ip)"""
 
+"""
+def tabla_ip(red_str):
+    red=ipaddress.ip_network(red_str, strict=False)
+
+    print("\n Red:", red,"\n")
+    print(f"{'Direccion IP':<18} {'Tipo':<10}")
+    print("-"*24,"\n")
+    
+    for ip in red:
+        if ip==red.network_address:
+            tipo="Red"
+        elif ip==red.broadcast_address:
+            tipo="Broadcast"
+        else:
+            tipo="Host"
+        print(f"{str(ip):<18}  {tipo:<10}")    
+
+tabla_ip(input("Ingresa una ip y su mask ejm 192.168.10.0/24: "))"""
+
+#Con un numero de variables como  argumentos
 
 
 
