@@ -75,7 +75,36 @@ tabla_ip(input("Ingresa una ip y su mask ejm 192.168.10.0/24: "))"""
 
 #Con un numero de variables como  argumentos
 
+"""def mostrar_ips(*ips):
+    for ip in ips:
+        print(ip)
 
+mostrar_ips("192.168.10.1","172.16.0.5","10.0.10.100")
+"""
+"""
+def mostrando_redes(*redes):
+    for red_str in redes:
+        red=ipaddress.ip_network(red_str,strict=False)
+        print(red)
+
+
+mostrando_redes("192.168.10.255/24","172.16.10.0/16","10.0.0.5/8")"""
+
+#Con un  numero de argumentos con palabra clave
+
+def informacion_red(**datos_red):
+    print("Informacion de la Red")
+    for clave, valor in datos_red.items():
+        print (f"{clave} : {valor} ")
+
+
+#Ingresamos los datos de la red:
+informacion_red(
+    Direccion="192.168.10.5",
+    Gateway="192.168.10.240",
+    Mascara="255.255.255.0",
+    Tipo="Privado"
+    )
 
 
 
